@@ -58,6 +58,9 @@ def get_news_from_api(page=1) -> List[Dict[str, str]]:
         "resultType": "articles",
         "apiKey": os.environ.get("API_NEWS_KEY")
     }
-    res = get_news(request).json()
+    res = get_news(request)
+    if res is None:
+        return []
+    res = res.json()
     news = res.get("articles", {}).get("results", [])
     return news

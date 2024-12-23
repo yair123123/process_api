@@ -10,6 +10,8 @@ class News:
     city: str
     country: str
     region: str
+    group_name:str
+    group_name2:str
     attacktype1_txt: str
     target_type: str
     target1: str

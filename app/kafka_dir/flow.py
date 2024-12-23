@@ -13,5 +13,5 @@ def produce_chunks(data: DataFrame, produce: Callable, chunks_size: int = 100):
         produce(data.iloc[i:i+chunks_size])
 
 def send_data(df_data):
-    produce_chunks(df_data,publisher(os.environ.get("TOPIC"),"process_data"))
+    produce_chunks(df_data,publisher("TOPIC","process_data"))
 

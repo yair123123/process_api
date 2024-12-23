@@ -24,6 +24,8 @@ def get_detail_from_news(news):
                     "city": str or None,
                     "country": str or None,
                     "region": str or None,
+                    "group_name": str or None, #name of group that performed the attack
+                    "group_name2": str or None,#name of group2 that performed the attack
                     "attacktype1_txt": str or None,
                     "target_type": str or None,
                     "target1": str or None,

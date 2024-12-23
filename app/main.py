@@ -11,7 +11,7 @@ if __name__ == '__main__':
         i += 1
         pd = pipe(
             get_news_from_api(i),
-             lambda x: [convert_news_model(news) for news in x ],
+             lambda x: [convert_news_model(news) for news in x],
              convert_to_pd
              )
         send_data(df_data=pd)
